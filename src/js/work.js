@@ -105,7 +105,9 @@ console.log(getUsersWithEyeColor(users, "blue")); // [об'єкт Moore Hensley,
 //Завдання 3
 //Отримати масив імен користувачів за статтю (поле gender)
 const getUsersWithGender = (users, gender) => {
-  return users.filter((user) => user.gender === gender);
+  return users
+    .filter((user) => user.gender === gender)
+    .map((user) => user.name);
 };
 
 console.log(getUsersWithGender(users, "male")); // [ 'Moore Hensley', 'Ross Vazquez', 'Carey Barr', 'Blackburn Dotson' ]
